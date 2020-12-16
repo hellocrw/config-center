@@ -15,4 +15,4 @@ eureka:
       defaultZone: http://localhost:7001/eureka
 
 info:
-  version: 1.0
+  version: 2.0
