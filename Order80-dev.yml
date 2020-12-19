@@ -7,12 +7,12 @@ spring:
   main:
     allow-bean-definition-overriding: true # 允许存在多个Feign调用相同的service接口
 
-#eureka:
-#  client:
-#    fetch-registry: true
-#    register-with-eureka: true
-#    service-url:
-#      defaultZone: http://localhost:7001/eureka
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka
 
 info:
   version: 2.1
