@@ -10,8 +10,8 @@ spring:
           enabled: true  # 开启从注册中心动态创建路由的功能，利用微服务名进行路由
       routes:
       - id: Order80
-        uri: http://localhost:80
-        #        uri: lb://ORDER80  # 匹配后提供服务的路由地址
+#        uri: http://localhost:80
+        uri: lb://ORDER80  # 匹配后提供服务的路由地址
         predicates:
         - Path=/**
         #            - Cookie=username,zzyy
