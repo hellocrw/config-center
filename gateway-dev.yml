@@ -22,7 +22,8 @@ spring:
         predicates:
         - Path=/online-team-info/**  # 断言，路径相匹配的进行路由
       - id: config-center-client
-        uri: http://localhost:9004
+#        uri: http://localhost:9004
+        uri: lb://config-center-client
         predicates:
         - Path=/config-center-client/**
 
