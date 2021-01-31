@@ -3,6 +3,12 @@ server:
 spring:
   application:
     name: online-team
+  cloud:
+    config:
+      label: master # master分支
+      name: online-team # 配置文件名称
+      profile: dev # 读取后缀名称    master 分支下的config-dev.yml配置文件
+      uri: http://8.129.110.202:9003  # 配置中心地址
   datasource:
 #    type: com.mysql.cj.jdbc.MysqlDataSource
     # mysql驱动类
@@ -16,6 +22,7 @@ mybatis:
 # 服务注册到eureka地址
 eureka:
   instance:
+    ip-address: 121.5.75.237
     prefer-ip-address: true
     hostname: online-team
   client:
