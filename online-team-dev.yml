@@ -13,9 +13,13 @@ spring:
 mybatis:
   mapper-locations: classpath*:mapper/*.xml
   type-aliases-package: crw.online.team.entity
+# 服务注册到eureka地址
 eureka:
-  client: 
-    register-with-eureka: true
-    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+    hostname: ORDER80
+  client:
     service-url:
       defaultZone: http://8.129.110.202:7001/eureka
+    fetch-registry: true
+    register-with-eureka: true
