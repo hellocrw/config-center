@@ -17,7 +17,7 @@ mybatis:
 eureka:
   instance:
     prefer-ip-address: true
-    hostname: ORDER80
+    hostname: online-team
   client:
     service-url:
       defaultZone: http://8.129.110.202:7001/eureka
