@@ -31,3 +31,6 @@ eureka:
       defaultZone: http://localhost:7001/eureka
     fetch-registry: true
     register-with-eureka: true
+
+config:
+  info: version-01
