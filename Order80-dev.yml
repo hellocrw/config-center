@@ -3,16 +3,31 @@ server:
 
 spring:
   application:
-    name: order80
-  main:
-    allow-bean-definition-overriding: true # 允许存在多个Feign调用相同的service接口
+    name: Order80
+  datasource:
+    #    type: com.mysql.cj.jdbc.MysqlDataSource
+    # mysql驱动类
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://8.129.110.202:3306/team?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: hellocrw.1103
+  mybatis:
+    mapper-locations: classpath*:mapper/*.xml
+    type-aliases-package: crw.team.order.entity
+#    nacos:
+#      config:
+#        server-addr: 127.0.0.1:8848
+#        name: example
+#        username: nacos
+#        password: nacos
 
-#eureka:
-#  client:
-#    fetch-registry: true
-#    register-with-eureka: true
-#    service-url:
-#      defaultZone: http://8.129.110.202:7001/eureka
-
-info:
-  version: 2.1
+# 服务注册到eureka地址
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: ORDER80
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+    fetch-registry: true
+    register-with-eureka: true

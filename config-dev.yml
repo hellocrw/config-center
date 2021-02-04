@@ -1,2 +1,19 @@
+server:
+  port: 9004
+
+spring:
+  application:
+    name: config-center-client
+
 config:
     info: master branch,springcloud-config/config-dev.yml version=1
+
+eureka:
+  instance:
+    hostname: config-center-client
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://8.129.110.202:7001/eureka
+    fetch-registry: true
+    register-with-eureka: true

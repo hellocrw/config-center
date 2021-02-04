@@ -8,6 +8,7 @@ spring:
       discovery:
         locator:
           enabled: true  # 开启从注册中心动态创建路由的功能，利用微服务名进行路由
+          lower-case-service-id: true
       routes:
       - id: Order80
 #        uri: http://localhost:80
@@ -30,8 +31,9 @@ spring:
 eureka:
   instance:
     hostname: cloud-gateway-service
+    prefer-ip-address: true
   client:  # 服务提供者provider注册进eureka服务列表中
     service-url:
-      register-with-eureka: true
-      fetch-registry: true
       defaultZone: http://8.129.110.202:7001/eureka
+    fetch-registry: true
+    register-with-eureka: true

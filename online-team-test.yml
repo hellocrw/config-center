@@ -16,6 +16,7 @@ mybatis:
 # 服务注册到eureka地址
 eureka:
   instance:
+    ip-address: 121.5.75.237
     prefer-ip-address: true
     hostname: online-team
   client:
