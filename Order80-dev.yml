@@ -34,3 +34,6 @@ eureka:
 
 config:
   info: version-01
+
+info:
+  version: 1.0
