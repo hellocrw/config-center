@@ -78,6 +78,6 @@ mybatis-plus:
 
 file:
   upload:
-    url: /root/nginx/www/files/
+    url: /crw
   output:
     url: /root/nginx/www/files/
